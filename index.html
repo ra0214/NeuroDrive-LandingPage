@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-accessibility="none" data-fontsize="medium">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroDrive - Monitoreo de Fatiga y Atención IoT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="accessibility-fab" class="fab-btn" aria-label="Abrir opciones de accesibilidad">♿</button>
+
+    <div id="accessibility-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Ajustes de Accesibilidad</h3>
+            <button id="accessibility-close" class="close-btn">&times;</button>
+        </div>
+        <div class="sidebar-body">
+            <div class="menu-section">
+                <h4>Asistencia de Voz</h4>
+                <button id="tts-toggle" class="action-btn">Leer pantalla completa</button>
+            </div>
+            
+            <div class="menu-section">
+                <h4>Tamaño de la Fuente</h4>
+                <div class="btn-group">
+                    <button id="size-decrease" class="group-btn">A-</button>
+                    <button id="size-increase" class="group-btn">A+</button>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h4>Filtros para Daltonismo</h4>
+                <div class="grid-buttons">
+                    <button class="daltonism-btn" data-mode="protanopia">Protanopia</button>
+                    <button class="daltonism-btn" data-mode="deuteranopia">Deuteranopia</button>
+                    <button class="daltonism-btn" data-mode="tritanopia">Tritanopia</button>
+                </div>
+                <button id="daltonism-reset" class="action-btn reset-btn">Restablecer colores estándar</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Neuro<span>Drive</span></div>
+            <ul class="nav-links">
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#solucion">Solución</a></li>
+                <li><a href="#usuarios">Usuarios</a></li>
+                <li><a href="#monetizacion">Monetización</a></li>
+                <li><a href="#tecnologia">Tecnología</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Prevención activa de accidentes mediante visión artificial local e IoT</h1>
+            <p>Monitoreo inteligente de fatiga y distracción en tiempo real, 100% offline.</p>
+            <div class="badges">
+                <span class="badge">9no Cuatrimestre</span>
+                <span class="badge">Proyecto Integrador</span>
+                <span class="badge">IoT & Edge AI</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="problema" class="section">
+        <h2>La Problemática Vial</h2>
+        <p class="subtitle">El factor humano detrás de los siniestros en carretera.</p>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Fatiga y Micro-sueños</h3>
+                <p>El cansancio acumulado y las jornadas nocturnas reducen drásticamente los reflejos del conductor, provocando parpadeos prolongados y pérdida de control involuntaria.</p>
+            </div>
+            <div class="card">
+                <h3>Vulnerabilidad y Aislamiento</h3>
+                <p>Las soluciones comerciales actuales fallan en la oscuridad de la cabina o dependen críticamente de internet, quedando obsoletas en tramos de carretera sin cobertura celular.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucion" class="section alt-bg">
+        <h2>Ecosistema NeuroDrive</h2>
+        <p class="subtitle">Seguridad activa integrada entre Software y Hardware Reactivo.</p>
+        <div class="features">
+            <div class="feature-item">
+                <h4>Visión Artificial Local</h4>
+                <p>Procesamiento de imágenes en el borde mediante la cámara frontal a 30 FPS. Detección geométrica de fatiga sin enviar datos a internet.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Automatización IoT en Cabina</h4>
+                <p>Un nodo central basado en el microcontrolador ESP32 activa ráfagas estroboscópicas RGB y alertas acústicas para romper el estado de somnolencia.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Asistencia Infrarroja Nocturna</h4>
+                <p>Iluminación invisible mediante LEDs IR de 940nm controlados por hardware, garantizando el rastreo ocular en total oscuridad sin deslumbrar al chofer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="usuarios" class="section">
+        <h2>Perfiles de Usuario</h2>
+        <p class="subtitle">Roles definidos para un entorno controlado de pruebas empíricas.</p>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Conductor / Operador</h3>
+                <p>Usuario central del sistema. Recibe el monitoreo biométrico pasivo, interactúa de forma segura mediante comandos de voz nativos (STT) sin soltar el volante y percibe las alertas físicas en cabina.</p>
+            </div>
+            <div class="card">
+                <h3>Contacto de Emergencia / Familiar</h3>
+                <p>Enlace de seguridad externo. Recibe de forma asíncrona la última coordenada GPS de telemetría y notificaciones automáticas ante eventos de fatiga crítica confirmados en ruta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="monetizacion" class="section alt-bg">
+        <h2>Modelo de Negocio</h2>
+        <p class="subtitle">Sustentabilidad financiera basada en la transparencia comercial.</p>
+        <div class="content-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 40px auto 0 auto;">
+            <div class="card pricing-card">
+                <span class="price-badge">Adquisición Única</span>
+                <h3>Kit de Hardware + Licencia de Software</h3>
+                <ul class="price-features">
+                    <li>✓ Microcontrolador IoT ESP32 programado</li>
+                    <li>✓ Módulo de Alertas (Buzzer + Luces Estroboscópicas)</li>
+                    <li>✓ Matriz de Asistencia Óptica Infrarroja (IR)</li>
+                    <li>✓ Acceso vitalicio ilimitado a la App Móvil Flutter</li>
+                    <li>✓ Procesamiento local sin suscripciones mensuales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="section">
+        <h2>Arquitectura & Stack Tecnológico</h2>
+        <p class="subtitle">Desarrollo robusto sin intermediación de agentes de terceros.</p>
+        <div class="stack-grid">
+            <div class="stack-box"><strong>Frontend:</strong> Flutter (Dart)</div>
+            <div class="stack-box"><strong>Backend:</strong> Go (Clean Architecture)</div>
+            <div class="stack-box"><strong>Base de Datos:</strong> PostgreSQL (SQL nativo)</div>
+            <div class="stack-box"><strong>IoT Firmware:</strong> (ESP32 / MQTT)</div>
+            <div class="stack-box"><strong>Algoritmos:</strong> MediaPipe Face Mesh & PERCLOS</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 InnovaTech - Universidad Politécnica de Chiapas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
